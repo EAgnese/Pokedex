@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <header>
+    <head>
         <title>Pokedex</title>
-        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="stylesheet" href="./assets/style.css">
 
         <!-- Import Vue -->
         <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
         <!-- Import API -->
         <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
 
-    </header>
+    </head>
 
     <body>
         <header>
@@ -20,7 +20,8 @@
         </header>
 
         <div id="app">
-            <pokemon></pokemon>
+            <h1> {{ pokemons }}</h1>
+            <pokemon-display></pokemon-display>
         </div>
     
         <footer>
@@ -33,7 +34,7 @@
         <script src="main.js"></script>
         <!-- Mount App -->
         <script>
-            const mountedApp = app.mount(#app)
+            const mountedApp = app.mount('#app')
         </script>
 
     </body>
