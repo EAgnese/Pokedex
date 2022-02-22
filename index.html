@@ -1,22 +1,41 @@
 <!DOCTYPE html>
-<header>
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="../assets/style.css">
-</header>
-<body>
+<html>
     <header>
-        <h1>
-            Pokedex
-        </h1>
-        <input type="search">
+        <title>Pokedex</title>
+        <link rel="stylesheet" href="../assets/style.css">
+
+        <!-- Import Vue -->
+        <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+        <!-- Import API -->
+        <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+
     </header>
 
-    <footer>
-        <p>
-            Développé par Eri Agnese
-        </p>
-    </footer>
+    <body>
+        <header>
+            <h1>
+                Pokedex
+            </h1>
+            <input type="search">
+        </header>
 
-    <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+        <div>
 
-</body>
+        </div>
+    
+        <footer>
+            <p>
+                Développé par Eri Agnese
+            </p>
+        </footer>
+    
+        <!-- Import  App-->
+        <script src="main.js"></script>
+        <!-- Mount App -->
+        <script>
+            const mountedApp = app.mount(#app)
+        </script>
+
+    </body>
+
+</html>
