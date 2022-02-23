@@ -6,6 +6,7 @@
 * {
     box-sizing: border-box;
     font-family: "vcr", sans-serif;
+    text-transform: uppercase;
 }
 
 header, footer{
@@ -48,24 +49,32 @@ body{
     border: solid;
     border-radius: 10px;
     padding : 10px;
+    background-color: white;
 }
 .pok-name{
     font-size: 20px;
     text-align: center;
 }
 
+
 .pok-types{
-    display: block;
+    display: table;
     margin: 0 auto;
-    width: 130px;
 }
 
+.pok-id{
+    border-radius: 50px;
+}
 .pok-type{
+    border-radius: 5px;
+    display: inline;
+}
+
+.pok-type, .pok-id{
     border: solid;
     border-color: lightgray;
-    border-radius: 5px;
     text-align: center;
-    display: inline;
+    
     padding: 2px 5px 2px 5px;
 }
 

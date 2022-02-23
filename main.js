@@ -9,9 +9,9 @@ const app = Vue.createApp({
     
     created(){
         P.getPokemonsList().then( res => {
-                this.list = res.results
-            })
-
+            this.list = res.results
+        })
+        
     },
     computed:{
         getList(){
