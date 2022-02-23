@@ -20,10 +20,12 @@
         </header>
 
         <div id="app">
-            <h1> {{ pokemons }}</h1>
-            <pokemon-display></pokemon-display>
+            <div id="list">
+                <pokemon-display v-for="pokemon in getList" :name="pokemon.name"></pokemon-display>
+            </div>
         </div>
     
+        
         <footer>
             <p>
                 Développé par Eri Agnese
@@ -32,6 +34,8 @@
     
         <!-- Import  App-->
         <script src="main.js"></script>
+        <!-- Import Components -->
+        <script src="components/PokemonDisplay.js"></script>
         <!-- Mount App -->
         <script>
             const mountedApp = app.mount('#app')

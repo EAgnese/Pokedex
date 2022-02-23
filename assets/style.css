@@ -6,7 +6,7 @@ header, footer{
     background-color: red;
     margin: 0;
     text-align: center;
-    position: absolute;
+    position: fixed;
     width: 100%;
 }
 
@@ -28,4 +28,22 @@ body{
     margin: 0;
     background-image: url(background.jpg);
 
+}
+
+#list{
+    display : flex;
+    flex-wrap : wrap;
+    flex-direction: row;
+    margin: 25px 15% 60px 15%;
+}
+
+.pok-display{
+    margin: 10px;
+    border: solid;
+    border-radius: 10px;
+    padding : 10px;
+}
+.pok-name{
+    font-size: 20px;
+    text-align: center;
 }

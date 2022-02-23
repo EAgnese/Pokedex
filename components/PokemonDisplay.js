@@ -1,15 +1,39 @@
 app.component('pokemon-display',{
-    template:
-    /*html*/
-    `<div class="pokemon-display">
-      <div class="pokemon-container">
-        <div class="pokemon-image">
-        </div>
-        <div class="pokemon-info">
-          <h1>Issou</h1>
   
-          <p v-else>Out of Stock</p>
+  data(){
+    return {
+      image : {},
+      types :[]
+    }
+  },
+  props:{
+    name:{
+      type: String,
+      required: true
+    },
+  },
+
+  created(){
+    P.getPokemonByName(this.name).then( res => {
+            this.image = res.sprites.other["official-artwork"].front_default
+            this.types = res.types
+        })
+  },
+
+  template:
+    /*html*/
+    `<div class="pok-display">
+      <div class="pok-container">
+
+        <div class="pok-name">
+          {{this.name}}
+        </div>
+
+        <img :src="image" width="200" height="200">
+
+        <div class="pok-type" v-for="t in types">
+          {{t.type.name}}
         </div>
       </div>
-    </div>`
+    </div>`,
 })
