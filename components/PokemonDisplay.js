@@ -30,9 +30,10 @@ app.component('pokemon-display',{
         </div>
 
         <img :src="image" width="200" height="200">
-
-        <div class="pok-type" v-for="t in types">
-          {{t.type.name}}
+        <div class="pok-types">
+          <div class="pok-type" v-for="t in types" :class="t.type.name">
+            {{t.type.name}}
+          </div>
         </div>
       </div>
     </div>`,
