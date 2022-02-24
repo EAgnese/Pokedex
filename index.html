@@ -3,6 +3,8 @@
     <head>
         <title>Pokedex</title>
         <link rel="stylesheet" href="./assets/style.css">
+        <link rel="icon" href="./assets/icon.png">
+
 
         <!-- Import Vue -->
         <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
@@ -12,14 +14,16 @@
     </head>
 
     <body>
-        <header>
-            <h1>
-                Pokedex
-            </h1>
-            <input type="search">
-        </header>
-
+        
         <div id="app">
+            <header>
+                <h1>
+                    Pokedex
+                </h1>
+                
+                <input type="search" v:model="input">
+            </header>
+
             <div id="list">
                 <pokemon-display v-show="!detailsName"v-for="pokemon in getList" :name="pokemon.name" v-on:details="changeName"></pokemon-display>
                 <pokemon-details v-if="detailsName" :name="detailsName" v-on:leave="leave"></pokemon-details>

@@ -49,7 +49,7 @@ app.component('pokemon-details',{
                 i++;
             }
 
-            this.description = res.flavor_text_entries[i-1].flavor_text
+            this.description = res.flavor_text_entries[i-1].flavor_text.replace("\n", " ").replace("\f", " ")
 
         })
     },
