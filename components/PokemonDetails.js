@@ -7,7 +7,8 @@ app.component('pokemon-details',{
             spec_name:"",
             img:{},
             abilities: [],
-            types: []
+            types: [],
+            stats: [],
         }
     },
     props : {
@@ -30,6 +31,7 @@ app.component('pokemon-details',{
             this.img = res.sprites.other["official-artwork"].front_default
             this.types = res.types
             this.abilities = res.abilities
+            this.stats = res.stats
         })
         P.getPokemonSpeciesByName(this.name).then(res =>{
             console.log("hello")
@@ -64,7 +66,7 @@ app.component('pokemon-details',{
                 the {{this.spec_name}}
             </h1>
 
-            <img :src="img" width="320" height="320">
+            <img class="img-details" :src="img" width="320" height="320">
 
             <br>
 
@@ -77,9 +79,17 @@ app.component('pokemon-details',{
                 </div>
             </div>
 
-            <div class="pok-types types-details">
-                <div v-for="a in abilities">
+            <div class="pok-abilities">
+                <strong>Abilities:</strong>
+                <div class="pok-ability" v-for="a in abilities">
                     {{a.ability.name}}
+                </div>
+            </div>
+
+            <div class="pok-stats">
+                <strong>Stats:</strong>
+                <div class="pok-stat" v-for="s in stats">
+                {{s.stat.name}}:{{s.base_stat}}
                 </div>
             </div>
 

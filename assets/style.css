@@ -41,8 +41,14 @@ body{
     display : flex;
     flex-wrap : wrap;
     flex-direction: row;
-    padding-top: 145px;
+    padding-top: 95px;
     margin: 25px 15% 60px 15%;
+}
+
+.img-details{
+    border: solid;
+    border-radius: 10px;
+    background-color: lightgray;
 }
 
 .pok-display {
@@ -67,7 +73,7 @@ body{
 .pok-id{
     border-radius: 50px;
 }
-.pok-type{
+.pok-type {
     border-radius: 5px;
     display: inline;
     margin: 0 2px 0 2px;
@@ -77,24 +83,26 @@ body{
     border: solid;
     border-color: lightgray;
     text-align: center;
-    
     padding: 2px 5px 2px 5px;
 }
 
 
-.pkm-descr{
-    margin: 15px;
+.pkm-descr, .pok-stats, .pok-abilities{
+    margin: 12px;
     border: solid;
     border-radius: 10px;
     padding : 5px;
+    background-color: lightgray;
 }
+
 
 #pok-details{
     width: 40%;
-    margin: 10px 29% 10px 29%;
+    margin: -30px 29% 10px 29%;
     border: solid;
     border-radius: 10px;
     padding : 10px;
+    padding-bottom: 0;
     background-color: white;
     display: table;
     text-align: center;;
