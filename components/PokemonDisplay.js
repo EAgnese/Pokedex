@@ -4,7 +4,7 @@ app.component('pokemon-display',{
     return {
       id : "",
       image : {},
-      types :[]
+      types :[],
     }
   },
   props:{
@@ -12,6 +12,7 @@ app.component('pokemon-display',{
       type: String,
       required: true
     },
+
   },
 
   created(){
@@ -20,6 +21,17 @@ app.component('pokemon-display',{
             this.types = res.types
             this.id = res.id;
         })
+  },
+
+  computed:{
+    isShowed(){
+      console.log(this.search)
+      if (this.search == ""){
+        return true;
+      }else{
+        return (this.name.toLowerCase().includes(this.search.toLowerCase()) || this.id.includes(this.search));
+      }
+    }
   },
 
   template:
@@ -36,7 +48,7 @@ app.component('pokemon-display',{
         </div>
 
 
-        <img :src="image" width="200" height="200">
+        <img :src="image" width="220" height="220">
         <div class="pok-types">
           <div class="pok-type" v-for="t in types" :class="t.type.name">
             {{t.type.name}}
