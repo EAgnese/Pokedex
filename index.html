@@ -20,12 +20,13 @@
                 <h1>
                     Pokedex
                 </h1>
-                
-                <input type="search" v:model="input">
+
+                <input v-model="input">
+
             </header>
 
             <div id="list">
-                <pokemon-display v-show="!detailsName"v-for="pokemon in getList" :name="pokemon.name" v-on:details="changeName"></pokemon-display>
+                <pokemon-display v-show="!detailsName" v-for="pokemon in getList" :name="pokemon.name" v-on:details="changeName" :input="input"></pokemon-display>
                 <pokemon-details v-if="detailsName" :name="detailsName" v-on:leave="leave"></pokemon-details>
             </div>
         </div>

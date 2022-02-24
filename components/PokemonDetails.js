@@ -64,12 +64,12 @@ app.component('pokemon-details',{
                 the {{this.spec_name}}
             </h1>
 
-            <img :src="img" width="220" height="220">
+            <img :src="img" width="320" height="320">
 
             <br>
 
-            weight : {{this.weight}} m
-            height : {{this.height}} kg
+            weight : {{this.weight}} kg
+            height : {{this.height}} m
 
             <div class="pok-types">
                 <div class="pok-type" v-for="t in types" :class="t.type.name">

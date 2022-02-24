@@ -12,6 +12,10 @@ app.component('pokemon-display',{
       type: String,
       required: true
     },
+    input:{
+      type: String,
+      required: false
+    }
 
   },
 
@@ -25,8 +29,7 @@ app.component('pokemon-display',{
 
   computed:{
     isShowed(){
-        return true
-
+      return this.name.includes(this.input.toLowerCase()) || (this.id.toString() == this.input)
     }
   },
 

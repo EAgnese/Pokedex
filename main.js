@@ -5,15 +5,10 @@ const app = Vue.createApp({
         return {
             list : [],
             detailsName: null,
+            input : ""
         }
     },
     
-    props:{
-        input : {
-            type: String,
-            required: false
-        }
-    },
     
     created(){
         P.getPokemonsList().then( res => {
@@ -34,6 +29,10 @@ const app = Vue.createApp({
     computed:{
         getList(){
             return this.list
+        },
+
+        getInput(){
+            return this.input
         }
     },
 })
