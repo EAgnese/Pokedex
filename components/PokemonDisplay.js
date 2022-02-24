@@ -25,19 +25,21 @@ app.component('pokemon-display',{
 
   computed:{
     isShowed(){
-      console.log(this.search)
-      if (this.search == ""){
-        return true;
-      }else{
-        return (this.name.toLowerCase().includes(this.search.toLowerCase()) || this.id.includes(this.search));
-      }
+        return true
+
     }
   },
 
+  methods:{
+    details() {
+        this.$emit("details", this.name)
+    }
+},
+
   template:
     /*html*/
-    `<div v-if="id < 10000" class="pok-display">
-      <div class="pok-container">
+    `<div v-if="id < 10000" class="pok-display" v-show="isShowed">
+      <div class="pok-container" @click="details">
 
         <div class="pok-id">
           {{("000" + id).slice(-3)}}
@@ -47,8 +49,8 @@ app.component('pokemon-display',{
           {{this.name}}
         </div>
 
-
         <img :src="image" width="220" height="220">
+        
         <div class="pok-types">
           <div class="pok-type" v-for="t in types" :class="t.type.name">
             {{t.type.name}}

@@ -21,7 +21,8 @@
 
         <div id="app">
             <div id="list">
-                <pokemon-display v-for="pokemon in getList" :name="pokemon.name"></pokemon-display>
+                <pokemon-display v-show="!detailsName"v-for="pokemon in getList" :name="pokemon.name" v-on:details="changeName"></pokemon-display>
+                <pokemon-details v-if="detailsName" :name="detailsName" v-on:leave="leave"></pokemon-details>
             </div>
         </div>
     
@@ -36,6 +37,7 @@
         <script src="main.js"></script>
         <!-- Import Components -->
         <script src="components/PokemonDisplay.js"></script>
+        <script src="components/PokemonDetails.js"></script>       
         <!-- Mount App -->
         <script>
             const mountedApp = app.mount('#app')

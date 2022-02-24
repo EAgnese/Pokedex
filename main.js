@@ -3,7 +3,15 @@ const P = new Pokedex.Pokedex()
 const app = Vue.createApp({
     data(){
         return {
-            list : []
+            list : [],
+            detailsName: null,
+        }
+    },
+    
+    props:{
+        input : {
+            type: String,
+            required: false
         }
     },
     
@@ -13,6 +21,16 @@ const app = Vue.createApp({
         })
         
     },
+
+    methods:{
+        changeName(pokname){
+            this.detailsName = pokname
+        },
+        leave(){
+            this.detailsName = null
+        },
+    },
+    
     computed:{
         getList(){
             return this.list

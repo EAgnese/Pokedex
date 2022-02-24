@@ -45,12 +45,13 @@ body{
     margin: 25px 15% 60px 15%;
 }
 
-.pok-display{
+.pok-display {
     margin: 10px;
     border: solid;
     border-radius: 10px;
     padding : 10px;
     background-color: white;
+    cursor: pointer;
 }
 .pok-name{
     font-size: 18px;
@@ -60,7 +61,7 @@ body{
 
 .pok-types{
     display: table;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .pok-id{
@@ -69,6 +70,7 @@ body{
 .pok-type{
     border-radius: 5px;
     display: inline;
+    margin: 0 2px 0 2px;
 }
 
 .pok-type, .pok-id{
@@ -78,6 +80,42 @@ body{
     
     padding: 2px 5px 2px 5px;
 }
+
+
+.pkm-descr{
+    margin: 15px;
+    border: solid;
+    border-radius: 10px;
+    padding : 5px;
+}
+
+#pok-details{
+    width: 40%;
+    margin: 10px 29% 10px 29%;
+    border: solid;
+    border-radius: 10px;
+    padding : 10px;
+    background-color: white;
+    display: table;
+    text-align: center;;
+}
+
+
+#quit{ 
+    user-select:none;
+    font-size: 30px;
+    border: solid;
+    border-radius: 100px;
+    padding : 0 5px 0 5px  ;
+    margin : auto 10px auto auto;
+    background-color: gray;
+    cursor: pointer;
+    display: table;
+}
+
+
+
+
 
 .normal {
     background-color:#A8A878
